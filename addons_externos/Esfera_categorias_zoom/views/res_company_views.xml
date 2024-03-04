@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="zoom_res_company_view_form" model="ir.ui.view">
+        <field name="name">zoom.res.company.view.form.inherit</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='redirect_urls']" position="before">
+                <!-- Aquí se añade el nuevo campo CharField -->
+                <field name="url_base_redirect" style="width:250px;border-width:3px;"/>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

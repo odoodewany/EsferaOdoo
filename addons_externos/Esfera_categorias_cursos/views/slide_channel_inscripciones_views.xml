@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Vista tree -->
+    <record id="slide_channel_inscripciones_tree" model="ir.ui.view">
+        <field name="name">slide.channel.inscripciones.tree</field>
+        <field name="model">slide.channel.inscripciones</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id"/>
+                <field name="product_id"/>
+                <field name="fecha_inicio"/>
+                <field name="fecha_fin"/>
+                <field name="grupo_id"/>
+                <field name="activo"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form -->
+    <record id="slide_channel_inscripciones_form" model="ir.ui.view">
+        <field name="name">slide.channel.inscripciones.form</field>
+        <field name="model">slide.channel.inscripciones</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="partner_id"/>
+                        <field name="product_id"/>
+                        <field name="fecha_inicio"/>
+                        <field name="fecha_fin"/>
+                        <field name="grupo_id"/>
+                        <field name="activo"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción -->
+    <record id="action_slide_channel_inscripciones" model="ir.actions.act_window">
+        <field name="name">Inscripciones de Cursos</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">slide.channel.inscripciones</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="menu_slide_channel_inscripciones" name="Inscripciones de Cursos" parent="sale.sale_menu_root" sequence="5" action="action_slide_channel_inscripciones"/>
+</odoo>
